@@ -1,10 +1,12 @@
 package com.walmart.countries.repo
 
+import com.walmart.countries.data.Countries
+
 /**
  * Created by Vamshi Nagamalla on 5/23/24.
  * Copyright © Vamshi Nagamalla. All rights reserved.
  * */
-class CountriesApiClient(private val api: CountriesApi) {
+interface CountriesRepo {
 
-    fun retrieveCountries() = api.retrieveCountries()
+    fun retrieveCountries(): Countries
 }
