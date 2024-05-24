@@ -1,6 +1,6 @@
 package com.walmart.countries.repo
 
-import com.walmart.countries.data.Countries
+import com.walmart.countries.data.Country
 
 /**
  * Created by Vamshi Nagamalla on 5/23/24.
@@ -8,5 +8,5 @@ import com.walmart.countries.data.Countries
  * */
 class CountriesRepoImpl(private val api: CountriesApi): CountriesRepo {
 
-    override fun retrieveCountries(): Countries = api.retrieveCountries()
+    override fun retrieveCountries(): List<Country> = api.retrieveCountries()
 }
