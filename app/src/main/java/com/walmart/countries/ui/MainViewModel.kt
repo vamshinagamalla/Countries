@@ -22,11 +22,7 @@ class MainViewModel: ViewModel() {
     private val _countries = MutableLiveData<List<Country>>()
     val countries: LiveData<List<Country>> get() = _countries
 
-    init {
-        fetchCountries()
-    }
-
-    private fun fetchCountries() {
+    fun fetchCountries() {
         viewModelScope.launch(ioDispatcher) {
             try {
                 val countriesList = repo.retrieveCountries()

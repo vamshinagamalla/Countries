@@ -6,5 +6,5 @@ package com.walmart.countries.repo
  * */
 class CountriesApiClient(private val api: CountriesApi) {
 
-    fun retrieveCountries() = api.retrieveCountries()
+    suspend fun retrieveCountries() = api.retrieveCountries()
 }

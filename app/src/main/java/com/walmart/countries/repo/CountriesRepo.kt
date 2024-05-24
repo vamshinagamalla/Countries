@@ -8,5 +8,5 @@ import com.walmart.countries.data.Country
  * */
 interface CountriesRepo {
 
-    fun retrieveCountries(): List<Country>
+    suspend fun retrieveCountries(): List<Country>
 }
